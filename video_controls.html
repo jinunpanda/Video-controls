@@ -124,7 +124,7 @@
 			range.setAttribute("max", Math.floor(vid.duration));
 
 			// value of progress the OUTPUT = 0;
-			video_currentTime.value = Math.floor(vid.currentTime);
+			progress.value = Math.floor(vid.currentTime);
 			range.value = Math.floor(vid.currentTime);
 
 			// seekbar action
@@ -146,7 +146,7 @@
 				progress.value = Math.floor(vid.currentTime);
 				range.value = Math.floor(vid.currentTime);
 							
-				/* update always the counting of the video in 500 milliseconds */
+				/* update the current time of video */
 				if (vidSecs_length == 1) {
 					timeStartHours.innerHTML = Math.floor(vid.currentTime / 60 / 60);
 					timeStartMinutes.innerHTML = Math.floor(vid.currentTime / 60);
@@ -220,7 +220,7 @@
 							'<path d="M0 0h24v24H0z" fill="none"/>' + 
 							'<path fill="#fff" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'
 						;
-						/* update it the video time every 16 milliseconds */
+						/* update it the video time every 100 milliseconds */
 						videoInterval = setInterval(function() {
 							
 							// update the current time of video once it playing
@@ -232,7 +232,7 @@
 								clearInterval(videoInterval);
 								isPlaying = false;
 
-								/* change the text to Play again */
+								/* change the to Play again */
 								play_and_pause_Btn.innerHTML =
 									'<path d="M0 0h24v24H0z" fill="none"/>' + 
 									'<path fill="#fff" d="M8 5v14l11-7z"/>'
