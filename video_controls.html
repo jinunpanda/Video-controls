@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Controls</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="video_controls.css" />
+	<style type="text/css">
+		
+		/* if you want to change the color of seekbar */
+		:root {
+			--seekBarColor: #1a73e8;
+		}
+		/* to control the width of video in DESKTOP */
+		[video-data-controls=true] {
+			width: 500px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div video-data-controls="true">
+		<!-- CHANGE THE VIDEO PATH SOURCE -->
+		<video>
+			<source src="10000_hours.mp4" type="video/mp4"></source>
+		</video>
+	</div>
+
+	<!-- VIDEO SCRIPTS -->
+	<script type="text/javascript" src="video_controls.js"></script>
+
+</body>
+</html>
