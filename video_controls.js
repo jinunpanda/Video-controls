@@ -130,7 +130,6 @@ window.onload = function() {
 		progress.value = Math.floor(vid.currentTime);
 		range.value = Math.floor(vid.currentTime);
 							
-		// update always the counting of the video in 500 milliseconds
 		if (vidSecs_length == 1) {
 			timeStartHours.innerHTML = Math.floor(vid.currentTime / 60 / 60);
 			timeStartMinutes.innerHTML = Math.floor(vid.currentTime / 60);
