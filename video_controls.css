@@ -66,10 +66,14 @@ progress {
 	appearance: none;
 	width: 11px;
 	height: 11px;
-	margin-left: -2px;
+	margin-left: -5px;
 	border-radius: 50%;
-	background: var(--seekBarColor);
+	background: none;
 	cursor: pointer;
+	box-shadow: none;
+}
+#range:hover::-webkit-slider-thumb {
+	background: var(--seekBarColor);
 	box-shadow: 0 1px 1px #555;
 }
 #range::-moz-range-thumb {
